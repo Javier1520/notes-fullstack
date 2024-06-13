@@ -18,8 +18,9 @@ echo "Installing backend dependencies..."
 cd backend || exit
 pipenv install
 
-echo "Running the Django server in a separate terminal session..."
-gnome-terminal --disable-factory -- pipenv run python3 manage.py runserver &
+# Step 3: Run the Django server in a new terminal
+echo "Running the Django server in a new terminal..."
+pipenv run python3 manage.py runserver &>/dev/null &
 
 # Step 4: Navigate to the frontend directory and install dependencies
 echo "Installing frontend dependencies..."
