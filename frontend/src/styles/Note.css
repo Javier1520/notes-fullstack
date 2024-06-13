@@ -1,0 +1,119 @@
+.note-container {
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.note-title {
+  color: #333;
+}
+
+.note-content {
+  color: #666;
+}
+
+.note-date {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* Container for buttons to align them horizontally */
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap if the container is too narrow */
+}
+
+.delete-button,
+.unset-category-button,
+.set-category-button,
+.edit-button,
+.archive-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Darker red */
+}
+
+.unset-category-button {
+  background-color: #ffc107; /* Yellow */
+  color: #333;
+}
+
+.unset-category-button:hover {
+  background-color: #ffab00; /* Darker yellow */
+}
+
+.set-category-button {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.set-category-button:hover {
+  background-color: #218838; /* Darker green */
+}
+
+.edit-button {
+  background-color: #007bff; /* Blue */
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+.archive-button {
+  background-color: #6c757d; /* Grey */
+  color: white;
+}
+
+.archive-button:hover {
+  background-color: #5a6268; /* Darker grey */
+}
+
+/* Styles for the select element */
+select {
+  width: auto; /* Adjust width to fit content */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Custom scroll */
+  overflow: auto;
+  max-height: 200px;
+  display: inline-block;
+  margin-left: 10px; /* Space between the button and the dropdown */
+}
+
+select option {
+  padding: 10px;
+}
+
+/* Custom scroll styles */
+select::-webkit-scrollbar {
+  width: 12px;
+}
+
+select::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+select::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
