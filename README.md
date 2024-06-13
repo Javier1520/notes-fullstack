@@ -1,3 +1,14 @@
+# Run with one command
+make the script executable
+```
+chmod +x start_project.sh
+```
+
+Then execute
+```
+./start_project.sh
+```
+
 # Frontend Documentation
 
 The frontend is built using React and React Router for handling navigation. The main routes are as follows:
