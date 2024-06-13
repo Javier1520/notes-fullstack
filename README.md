@@ -1,3 +1,40 @@
+# Frontend Documentation
+
+The frontend is built using React and React Router for handling navigation. The main routes are as follows:
+
+## Routes
+
+### `/`
+
+This is the main route, which renders the `Home` component. The `Home` component is wrapped inside the `ProtectedRoute` component, which ensures that only authenticated users can access this route. If the user is not authenticated, they will be redirected to the `/login` route.
+
+In the `Home` component, authenticated users can perform the following actions:
+
+- Create a new note
+- View a list of their notes
+- Edit an existing note
+- Assign or unassign a category to a note
+- Archive or unarchive a note
+- Delete a note
+
+### `/login`
+
+This route renders the `Login` component, where users can enter their credentials to authenticate and receive an access token and refresh token. After successful authentication, the user will be redirected to the `/` route.
+
+### `/logout`
+
+This route logs out the user by clearing the authentication tokens from localStorage and redirects the user to the `/login` route.
+
+### `/register`
+
+This route renders the `Register` component, where new users can create an account. After successful registration, the user will be redirected to the `/login` route to log in with their new credentials.
+
+### `/*`
+
+This is a catch-all route that renders the `NotFound` component for any other routes that don't match the defined routes.
+
+Note that all routes requiring authentication (e.g., `/`) use the `ProtectedRoute` component to ensure that only authenticated users can access them. If an unauthenticated user tries to access a protected route, they will be redirected to the `/login` route.
+
 
 # API Documentation
 
@@ -29,7 +66,7 @@
     "access": "accesstoken"
   }
   ```
-  
+
   - `200 OK` with access and refresh tokens on success
   - `400 Bad Request` if request data is invalid
 
